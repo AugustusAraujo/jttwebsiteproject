@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 06</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="terminal">
+            <header>
+                <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">X</a>
+            </header>
+            <div class="history">
+                <!-- 76 is the line's character limit -->
+                <div class="item">Hey! I'm a random command line and I'll give you a quick tutorial of how to use me :)
+                </div>
+                <div class="item"><br>Instructions:</div>
+                <div class="item">clear: Remove all the craps from your view; <mark>clear</mark></div>
+                <div class="item">sum: a + b; <mark>sum(1,2)</mark></div>
+                <div class="item">min: a - b; <mark>min(2,1)</mark></div>
+                <div class="item">div: a / b; <mark>div(1,2)</mark></div>
+                <div class="item">lft: a % b; <mark>lft(7,3)</mark></div>
+                <div class="item">mlt: a * b; <mark>mlt(1,2)</mark></div>
+                <div class="item">pow: a ^ b; <mark>pow(2,2)</mark></div>
+                <div class="item"><br>Every instruction will be printed when you hit ENTER.</div>
+                <div class="item"><br><mark>WARNING</mark> Expressions like <mark>sum(1, sum(3,4))</mark> aren't
+                    supported by now.</div>
+                <div class="item">============================================================================</div>
+            </div>
+            <div class="line">
+                <div class="block">></div>
+                <input type="text" placeholder="Type some code here" class="input" maxlength="50">
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+    <script>
+        window.addEventListener("keypress", (e) => {
+            if (e.keyCode == 13) {
+                let input = window.document.querySelector(".input");
+                transpile(input.value);
+                input.value = "";   
+            }
+        })
+    </script>
+</body>
+
+</html>
